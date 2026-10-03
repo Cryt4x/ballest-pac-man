@@ -1,0 +1,30 @@
+# Pac-Man inside a clear ball: two yellow half shells, black inside, with two black eyes on top. The travel group keeps
+# him upright and facing where the ball goes (+x is forward, +y the ball's right, +z up; the ball is 50 from its
+# centre).
+#
+# The mouth: both halves turn about his centre (pivot 0,0,0, swing=y: the axis across him), so the front opens and
+# only the back overlaps, inside him. Each half rests 22.5 degrees open (rot pitch) and swings 22.5 each way, against
+# the other (phase=180): shut (the two halves meet as one ball) to 90 degrees open (45 each), never past shut.
+# The top half is the bottom shell turned over (pitch 180) and opened upward (+22.5): pitch 202.5.
+# The eyes sit where they belong on the shut ball (28,+-17,34), turned up with the top half by 22.5: 12.9,+-17,42.1.
+material yellow plastic #ffd800 rough=0.4
+material mouth plastic #101010 rough=0.9
+material eye plastic #0a0a0a rough=0.2
+
+# Still: no chewing (calm=0), the mouth stays half open (45 degrees). Moving: chews faster with speed, up to 2.5
+# times a second, and opens fully from 3 m/s.
+tempo rate=0 run=0.2 max=2.5 calm=0 full=3
+
+group body travel
+
+# the top half, with the eyes
+group top on=body pivot=0,0,0 swing=y angle=22.5
+bowl yellow r=47 wall=3 rot=202.5,0,0
+bowl mouth r=44 wall=1 rot=202.5,0,0
+sphere eye r=5.5 at=12.9,-17,42.1
+sphere eye r=5.5 at=12.9,17,42.1
+
+# the bottom half, opened downward
+group bottom on=body pivot=0,0,0 swing=y angle=22.5 phase=180
+bowl yellow r=47 wall=3 rot=-22.5,0,0
+bowl mouth r=44 wall=1 rot=-22.5,0,0

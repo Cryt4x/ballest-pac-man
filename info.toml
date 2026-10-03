@@ -1,0 +1,11 @@
+[meta]
+name = "Pac-Man Ball"
+version = "1.0.1"
+author = "CryT4x"
+description = "Adds a clear ball with Pac-Man inside: he faces where the ball goes and chomps while it rolls, faster the faster it goes."
+min_host = "0.16.0"
+dependencies = ["cosmetic-kit"]
+
+[script]
+files = ["main.as"]
+assets = ["*.png", "models/*.txt"]
