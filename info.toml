@@ -1,6 +1,6 @@
 [meta]
 name = "Pac-Man"
-version = "1.0.1"
+version = "1.0.2"
 author = "CryT4x"
 description = "Adds a clear ball with Pac-Man inside: he faces where the ball goes and chomps while it rolls, faster the faster it goes."
 min_host = "0.16.0"
