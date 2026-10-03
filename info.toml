@@ -1,5 +1,5 @@
 [meta]
-name = "Pac-Man Ball"
+name = "Pac-Man"
 version = "1.0.1"
 author = "CryT4x"
 description = "Adds a clear ball with Pac-Man inside: he faces where the ball goes and chomps while it rolls, faster the faster it goes."
